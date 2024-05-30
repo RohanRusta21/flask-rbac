@@ -1,1 +1,3 @@
 flask-login
+flask
+kubernetes
