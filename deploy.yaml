@@ -1,0 +1,21 @@
+# deployment.yaml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rbac-webapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rbac-webapp
+  template:
+    metadata:
+      labels:
+        app: rbac-webapp
+    spec:
+      containers:
+      - name: rbac-webapp
+        image: us-docker.pkg.dev/google-samples/containers/gke/hello-app:1.0
+        ports:
+        - containerPort: 8080
