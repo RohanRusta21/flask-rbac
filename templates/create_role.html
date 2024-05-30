@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Create Role{% endblock %}
+
+{% block content %}
+<h1>Create Role</h1>
+<form method="POST" action="/create_role">
+    <label for="namespace">Namespace:</label>
+    <input type="text" id="namespace" name="namespace" required><br>
+    <label for="role_name">Role Name:</label>
+    <input type="text" id="role_name" name="role_name" required><br>
+    <label for="rules">Rules (JSON):</label><br>
+    <textarea id="rules" name="rules" required></textarea><br>
+    <input type="submit" value="Create Role">
+</form>
+{% endblock %}

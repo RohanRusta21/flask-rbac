@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Role Bindings{% endblock %}
+
+{% block content %}
+<h1>Role Bindings in {{ namespace }}</h1>
+<ul>
+    {% for role_binding in role_bindings %}
+        <li>{{ role_binding.metadata.name }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

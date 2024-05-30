@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Cluster Role Bindings{% endblock %}
+
+{% block content %}
+<h1>Cluster Role Bindings</h1>
+<ul>
+    {% for cluster_role_binding in cluster_role_bindings %}
+        <li>{{ cluster_role_binding.metadata.name }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,3 +1,4 @@
-flask-login
-flask
+Flask
+Flask-Login
 kubernetes
+Werkzeug

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Cluster Roles{% endblock %}
+
+{% block content %}
+<h1>Cluster Roles</h1>
+<ul>
+    {% for cluster_role in cluster_roles %}
+        <li>{{ cluster_role.metadata.name }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
